@@ -16,6 +16,7 @@
     "head_custom.html" . }}
   </head>
 
+  {{ if not .IsHome }}
   <body>
     <nav>
       <ul class="menu">
@@ -23,5 +24,7 @@
         <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
         {{ end }}
       </ul>
-      <hr /> </nav></body
-></html>
+      <hr /> </nav
+  ></body>
+  {{ end }}
+</html>
