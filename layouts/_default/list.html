@@ -3,13 +3,13 @@
 {{ end }} {{ .Content }}
 
 <ul>
-  {{ $pages := .Pages }} {{ if .IsHome }}{{ $pages = .Site.RegularPages }}{{ end
-  }} {{ range (where $pages "Section" "!=" "") }}
+  {{ $blogSection := .Site.GetPage "section" "blog" }} {{ if $blogSection }} {{
+  range $blogSection.Pages }}
   <li>
-    <span class="date">{{ .Date.Format "2006/01/02" }}</span>
-    <a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>
+    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    <span class="date">{{ .Date.Format "2006-01-02" }}</span>
   </li>
-  {{ end }}
+  {{ end }} {{ else }}
+  <p>No blog posts found.</p>
+  {{ end }} {{ partial "footer.html" . }}
 </ul>
-
-{{ partial "footer.html" . }}
