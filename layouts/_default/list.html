@@ -1,15 +1,18 @@
-{{ partial "header.html" . }} {{if not .IsHome }}
-<h1>{{ .Title | markdownify }}</h1>
-{{ end }} {{ .Content }}
+{{ partial "header.html" . }}
 
-<ul>
-  {{ $blogSection := .Site.GetPage "section" "blog" }} {{ if $blogSection }} {{
-  range $blogSection.Pages }}
-  <li>
-    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-    <span class="date">{{ .Date.Format "2006-01-02" }}</span>
-  </li>
-  {{ end }} {{ else }}
-  <p>No blog posts found.</p>
-  {{ end }} {{ partial "footer.html" . }}
-</ul>
+<div class="content">
+  {{if not .IsHome }}
+  <h1>{{ .Title | markdownify }}</h1>
+  {{ end }} {{ .Content }}
+
+  <ul>
+    {{ $blogSection := .Site.GetPage "section" "blog" }} {{ range
+    $blogSection.Pages }}
+    <li>
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>,
+      <span class="date">{{ .Date.Format "2006-01-02" }}</span>
+    </li>
+    {{ end }}
+  </ul>
+</div>
+{{ partial "footer.html" . }}

@@ -1,3 +1,7 @@
-{{ partial "header.html" . }} {{if not .IsHome }}
+{{ partial "header.html" . }} {{ if not .IsHome }}
 <h1>{{ .Title | markdownify }}</h1>
-{{ end }} {{ .Content }} {{ partial "footer.html" . }}
+{{ end }}
+
+<div class="content"> {{ .Content }} </div>
+
+{{ partial "footer.html" . }}

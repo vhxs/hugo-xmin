@@ -1,7 +1,8 @@
 <footer>
+  <div class="footer-links">
   {{ partial "foot_custom.html" . }}
   {{ with .Site.Params.footer }}
-  <hr />
+</div>
   {{ replace . "{Year}" now.Year | markdownify}}
   {{ end }}
 </footer>

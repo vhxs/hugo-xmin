@@ -18,13 +18,16 @@
 
   {{ if not .IsHome }}
   <body>
-    <nav>
-      <ul class="menu">
-        {{ range .Site.Menus.main }}
-        <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
-        {{ end }}
-      </ul>
-      <hr /> </nav
-  ></body>
+    <div class="header">
+      <h1>{{ .Site.Params.author }}</h1>
+      <nav>
+        <ul class="menu">
+          {{ range .Site.Menus.main }}
+          <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+          {{ end }}
+        </ul>
+      </nav></div
+    >
+  </body>
   {{ end }}
 </html>
