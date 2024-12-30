@@ -23,6 +23,6 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 Modified version of the original theme, licensed under the MIT License.
 
-Copyright (c) [2024] [Vikram Saraph]
+Copyright (c) 2024 Vikram Saraph
 
 This theme is a modified version of the original theme created by Yihui Xie. The original work can be found at https://github.com/yihui/hugo-xmin.
