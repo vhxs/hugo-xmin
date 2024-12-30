@@ -18,3 +18,11 @@ FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
 COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
 IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+---
+
+Modified version of the original theme, licensed under the MIT License.
+
+Copyright (c) [2024] [Vikram Saraph]
+
+This theme is a modified version of the original theme created by Yihui Xie. The original work can be found at https://github.com/yihui/hugo-xmin.
